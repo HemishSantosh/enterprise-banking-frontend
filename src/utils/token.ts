@@ -1,17 +1,17 @@
 const TOKEN_KEY = "jwtToken";
 
-export const saveToken = (token: string) => {
+export const saveToken = (token: string): void => {
   localStorage.setItem(TOKEN_KEY, token);
 };
 
-export const getToken = () => {
+export const getToken = (): string | null => {
   return localStorage.getItem(TOKEN_KEY);
 };
 
-export const removeToken = () => {
+export const removeToken = (): void => {
   localStorage.removeItem(TOKEN_KEY);
 };
 
-export const isAuthenticated = () => {
-  return !!getToken();
+export const isAuthenticated = (): boolean => {
+  return getToken() !== null;
 };

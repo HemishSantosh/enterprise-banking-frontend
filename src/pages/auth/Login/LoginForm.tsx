@@ -49,7 +49,7 @@ export default function LoginForm() {
       saveToken(response.token);
 
       toast.success(response.message);
-
+localStorage.setItem("token", response.token);
       navigate("/dashboard");
     } catch (error: unknown) {
       if (axios.isAxiosError(error)) {
