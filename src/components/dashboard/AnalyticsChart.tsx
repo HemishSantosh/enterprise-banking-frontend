@@ -41,7 +41,7 @@ export default function AnalyticsChart() {
     );
   }
 
-  const chartData = analytics.months.map((month, index) => ({
+  const chartData = analytics.months.map((month: string, index: number)  => ({
     month,
     deposits: analytics.deposits[index],
     withdrawals: analytics.withdrawals[index],

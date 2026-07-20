@@ -44,21 +44,21 @@ export default function SpendingChart() {
     {
       name: "Deposits",
       value: analytics.deposits.reduce(
-        (a, b) => a + b,
+        (a: number, b: number) => a + b,
         0
       ),
     },
     {
       name: "Withdrawals",
       value: analytics.withdrawals.reduce(
-        (a, b) => a + b,
+        (a: number, b: number) => a + b,
         0
       ),
     },
     {
       name: "Transfers",
       value: analytics.transfers.reduce(
-        (a, b) => a + b,
+        (a: number, b: number) => a + b,
         0
       ),
     },

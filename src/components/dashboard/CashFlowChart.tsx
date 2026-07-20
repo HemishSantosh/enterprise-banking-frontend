@@ -45,8 +45,7 @@ export default function CashFlowChart() {
     );
   }
 
-  const data = analytics.months.map(
-    (month, index) => ({
+  const data = analytics.months.map((month: string, index: number) => ({
       month,
       cashflow:
         analytics.deposits[index] -

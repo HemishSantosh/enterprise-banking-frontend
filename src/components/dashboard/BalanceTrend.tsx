@@ -36,7 +36,7 @@ export default function BalanceTrend() {
     );
   }
 
-  const data = analytics.months.map((month, index) => ({
+  const data = analytics.months.map((month: string, index: number) => ({
     month,
     balance:
       analytics.deposits[index] -
