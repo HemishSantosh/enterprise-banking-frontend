@@ -31,3 +31,9 @@ export interface MonthlyTrend {
     income: number;
     expense: number;
 }
+export interface AnalyticsResponse {
+  months: string[];
+  deposits: number[];
+  withdrawals: number[];
+  transfers: number[];
+}

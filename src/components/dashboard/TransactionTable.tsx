@@ -8,7 +8,6 @@ import {
   TableRow,
   TableCell,
   TableBody,
-  Chip,
   TextField,
   TablePagination,
   CircularProgress,
@@ -44,7 +43,7 @@ export default function TransactionTable() {
 
     return transactions.filter((txn) =>
 
-      txn.transactionId
+      txn.referenceNumber
         .toLowerCase()
         .includes(search.toLowerCase())
 
@@ -91,7 +90,7 @@ export default function TransactionTable() {
 
       <TextField
         fullWidth
-        placeholder="Search Transaction ID..."
+        placeholder="Search Reference Number..."
         value={search}
         onChange={(e) =>
           setSearch(e.target.value)
@@ -106,7 +105,7 @@ export default function TransactionTable() {
           <TableRow>
 
             <TableCell>
-              Transaction ID
+              Reference Number
             </TableCell>
 
             <TableCell>
@@ -144,11 +143,11 @@ export default function TransactionTable() {
 
               <TableRow
                 hover
-                key={txn.transactionId}
+                key={txn.referenceNumber}
               >
 
                 <TableCell>
-                  {txn.transactionId}
+                  {txn.referenceNumber}
                 </TableCell>
 
                 <TableCell>
@@ -171,21 +170,7 @@ export default function TransactionTable() {
 
                 </TableCell>
 
-                <TableCell>
-
-                  <Chip
-                    label={txn.status}
-                    color={
-                      txn.status === "SUCCESS"
-                        ? "success"
-                        : txn.status === "FAILED"
-                        ? "error"
-                        : "warning"
-                    }
-                  />
-
-                </TableCell>
-
+              
                 <TableCell>
 
                   {txn.remarks}
