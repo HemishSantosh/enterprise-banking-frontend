@@ -1,75 +1,199 @@
-# React + TypeScript + Vite
+# 🏦 Enterprise Banking System - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive banking web application built using **React**, **TypeScript**, **Material UI**, and **Vite**. This application provides a secure and user-friendly interface for customers and administrators to manage banking operations.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🌐 Live Demo
 
-## React Compiler
+**Frontend:** https://YOUR-VERCEL-URL.vercel.app
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**Backend API:** https://YOUR-BACKEND-URL.onrender.com
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📌 Project Description
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+The Enterprise Banking System is a full-stack banking application designed to simulate real-world banking operations. The frontend communicates with a secure Spring Boot REST API using JWT authentication and provides a responsive dashboard for managing accounts, transactions, and user information.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+The application follows a component-based architecture, ensuring scalability, maintainability, and code reusability.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
 
-```
+## ✨ Features
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- 🔐 User Registration & Login
+- 🔑 JWT Authentication
+- 👤 Customer Dashboard
+- 💳 Account Details
+- 💸 Money Transfer
+- 📜 Transaction History
+- 📊 Dashboard Analytics
+- 👨‍💼 Admin Dashboard
+- 📱 Fully Responsive UI
+- 🚪 Protected Routes
+- ⚡ Fast Loading using Vite
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# 🛠️ Tech Stack
+
+| Technology | Purpose |
+|------------|----------|
+| React 19 | Frontend Framework |
+| TypeScript | Type Safety |
+| Vite | Build Tool |
+| Material UI | UI Components |
+| Axios | API Communication |
+| React Router | Navigation |
+| CSS | Styling |
+
+---
+
+# 🏗️ Project Architecture
+
+# 🏗️ System Architecture
 
 ```
+                    ┌───────────────────────────────┐
+                    │           Client              │
+                    │      Web Browser/User         │
+                    └───────────────┬───────────────┘
+                                    │
+                                    ▼
+                    ┌───────────────────────────────┐
+                    │ React + TypeScript Frontend   │
+                    │          (Vercel)             │
+                    └───────────────┬───────────────┘
+                                    │
+                             REST API (HTTPS)
+                                    │
+                                    ▼
+                    ┌───────────────────────────────┐
+                    │ Spring Boot Backend           │
+                    │ Spring Security + JWT         │
+                    │          (Render)             │
+                    └───────────────┬───────────────┘
+                                    │
+                          Spring Data JPA / Hibernate
+                                    │
+                                    ▼
+                    ┌───────────────────────────────┐
+                    │      MySQL Database           │
+                    │      (Clever Cloud)           │
+                    └───────────────────────────────┘
+```
+
+# 📁 Project Structure
+
+```
+banking-frontend
+│
+├── public
+│
+├── src
+│   ├── assets
+│   ├── components
+│   ├── context
+│   ├── hooks
+│   ├── layouts
+│   ├── pages
+│   ├── routes
+│   ├── services
+│   ├── styles
+│   ├── types
+│   ├── utils
+│   ├── App.tsx
+│   └── main.tsx
+│
+├── package.json
+├── tsconfig.json
+├── vite.config.ts
+└── README.md
+```
+
+---
+
+# ⚙️ Installation
+
+Clone the repository
+
+```bash
+git clone https://github.com/YOUR_USERNAME/banking-frontend.git
+```
+
+Navigate to the project
+
+```bash
+cd banking-frontend
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Start the development server
+
+```bash
+npm run dev
+```
+
+---
+
+# 🔗 Backend Repository
+
+This project communicates with the backend REST API.
+
+Backend Repository:
+
+https://github.com/YOUR_USERNAME/banking-backend
+
+---
+
+# 🚀 Deployment
+
+| Service | Platform |
+|----------|----------|
+| Frontend | Vercel |
+| Backend | Render |
+| Database | Clever Cloud MySQL |
+
+---
+
+# 📸 Application Screenshots
+
+> Add screenshots here
+
+- Login Page
+- Registration Page
+- Dashboard
+- Transaction History
+- Money Transfer
+- Admin Dashboard
+
+---
+
+# 🔮 Future Enhancements
+
+- 🌙 Dark Mode
+- 🔔 Notifications
+- 📄 PDF Bank Statements
+- 📈 Advanced Analytics
+- 📧 Email Alerts
+- 🌍 Multi-language Support
+
+---
+
+# 👨‍💻 Author
+
+**Hemish S**
+
+B.Tech – Electronics & Communication Engineering
+
+---
+
+## ⭐ Support
+
+If you found this project useful, don't forget to ⭐ the repository.
