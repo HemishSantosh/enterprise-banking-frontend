@@ -50,7 +50,7 @@ The application follows a component-based architecture, ensuring scalability, ma
 
 ---
 
-# 🏗️ Project Architecture
+
 
 # 🏗️ System Architecture
 
