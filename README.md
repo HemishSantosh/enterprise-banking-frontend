@@ -8,8 +8,6 @@ A modern and responsive banking web application built using **React**, **TypeScr
 
 **Frontend:** https://enterprise-banking-frontend.vercel.app/
 
-**Backend API:** https://banking-backend-c2c0.onrender.com
-
 ---
 
 ## 📌 Project Description
