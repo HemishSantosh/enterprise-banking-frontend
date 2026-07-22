@@ -43,30 +43,48 @@ export default function LoginForm() {
   });
 
   const onSubmit = async (data: LoginRequest) => {
+    console.log("Login Request:", data);
+
     try {
       const response = await login(data);
 
+      console.log("Login Response:", response);
+
+      if (!response.token) {
+        toast.error("Token not received from server");
+        return;
+      }
+
+      // Save JWT Token
       saveToken(response.token);
 
-      toast.success(response.message);
-localStorage.setItem("token", response.token);
+      console.log("Token Saved Successfully");
+
+      toast.success(response.message || "Login Successful");
+
+      // Redirect to Dashboard
       navigate("/dashboard");
     } catch (error: unknown) {
+      console.log("========== LOGIN ERROR ==========");
+
       if (axios.isAxiosError(error)) {
+        console.log("Status:", error.response?.status);
+        console.log("Data:", error.response?.data);
+        console.log("Headers:", error.response?.headers);
+        console.log("Message:", error.message);
+
         toast.error(
           error.response?.data?.message ?? "Login Failed"
         );
       } else {
-        toast.error("Login Failed");
+        console.error(error);
+        toast.error("Unexpected Error");
       }
     }
   };
 
   return (
-    <Box
-      component="form"
-      onSubmit={handleSubmit(onSubmit)}
-    >
+    <Box component="form" onSubmit={handleSubmit(onSubmit)}>
       <Typography
         variant="h4"
         fontWeight={700}
@@ -121,9 +139,7 @@ localStorage.setItem("token", response.token);
             endAdornment: (
               <InputAdornment position="end">
                 <IconButton
-                  onClick={() =>
-                    setShowPassword(!showPassword)
-                  }
+                  onClick={() => setShowPassword(!showPassword)}
                 >
                   {showPassword ? (
                     <VisibilityOff />
@@ -158,44 +174,35 @@ localStorage.setItem("token", response.token);
         {isSubmitting ? "Signing In..." : "Login"}
       </Button>
 
-
-<Typography
-  mt={2}
-  textAlign="center"
-  color="primary"
-  sx={{ cursor: "pointer" }}
->
-  Forgot Password?
-</Typography>
-
-<Typography
-  mt={3}
-  textAlign="center"
-  color="text.secondary"
->
-  Don't have an account?{" "}
-  <Typography
-    component="span"
-    color="primary"
-    fontWeight={600}
-    sx={{
-      cursor: "pointer",
-      "&:hover": {
-        textDecoration: "underline",
-      },
-    }}
-    onClick={() => navigate("/register")}
-  >
-    Register
-  </Typography>
-</Typography>
       <Typography
         mt={2}
         textAlign="center"
         color="primary"
         sx={{ cursor: "pointer" }}
       >
-      
+        Forgot Password?
+      </Typography>
+
+      <Typography
+        mt={3}
+        textAlign="center"
+        color="text.secondary"
+      >
+        Don't have an account?{" "}
+        <Typography
+          component="span"
+          color="primary"
+          fontWeight={600}
+          sx={{
+            cursor: "pointer",
+            "&:hover": {
+              textDecoration: "underline",
+            },
+          }}
+          onClick={() => navigate("/register")}
+        >
+          Register
+        </Typography>
       </Typography>
     </Box>
   );
