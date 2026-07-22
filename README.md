@@ -161,8 +161,6 @@ https://github.com/HemishSantosh/enterprise-banking-backend.git
 ---
 
 # 📸 Application Screenshots
-
-> Add screenshots here
 Login
 <img width="1366" height="766" alt="banking-frontend - Google Chrome 22-07-2026 17_46_27" src="https://github.com/user-attachments/assets/7e79a7d5-cf35-454c-8f0a-1dada181b85e" />
 
