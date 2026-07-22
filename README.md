@@ -119,7 +119,7 @@ banking-frontend
 Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/banking-frontend.git
+git clone https://github.com/HemishSantosh/banking-frontend.git
 ```
 
 Navigate to the project
@@ -148,7 +148,7 @@ This project communicates with the backend REST API.
 
 Backend Repository:
 
-https://github.com/YOUR_USERNAME/banking-backend
+https://github.com/HemishSantosh/banking-backend
 
 ---
 
