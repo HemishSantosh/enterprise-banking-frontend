@@ -1,4 +1,4 @@
-# 🏦 Enterprise Banking System - Frontend
+<img width="1366" height="766" alt="banking-frontend - Google Chrome 22-07-2026 17_46_27" src="https://github.com/user-attachments/assets/7e79a7d5-cf35-454c-8f0a-1dada181b85e" /># 🏦 Enterprise Banking System - Frontend
 
 A modern and responsive banking web application built using **React**, **TypeScript**, **Material UI**, and **Vite**. This application provides a secure and user-friendly interface for customers and administrators to manage banking operations.
 
@@ -8,7 +8,7 @@ A modern and responsive banking web application built using **React**, **TypeScr
 
 **Frontend:** https://enterprise-banking-frontend.vercel.app/
 
-**Backend API:** https://YOUR-BACKEND-URL.onrender.com
+**Backend API:** https://banking-backend-c2c0.onrender.com
 
 ---
 
@@ -148,7 +148,7 @@ This project communicates with the backend REST API.
 
 Backend Repository:
 
-https://github.com/HemishSantosh/banking-backend
+https://github.com/HemishSantosh/enterprise-banking-backend.git
 
 ---
 
@@ -165,13 +165,12 @@ https://github.com/HemishSantosh/banking-backend
 # 📸 Application Screenshots
 
 > Add screenshots here
+<img width="1366" height="766" alt="banking-frontend - Google Chrome 22-07-2026 17_49_49" src="https://github.com/user-attachments/assets/f2a9d3ac-251e-4660-8aea-80719681676d" />
+<img width="1366" height="766" alt="banking-frontend - Google Chrome 22-07-2026 17_49_37" src="https://github.com/user-attachments/assets/be2189da-287c-4bad-b5fd-d7bea8acb3a6" />
+<img width="1366" height="766" alt="banking-frontend - Google Chrome 22-07-2026 17_49_20" src="https://github.com/user-attachments/assets/39623365-2678-4a55-977b-a98aff6a48ad" />
+<img width="1366" height="766" alt="banking-frontend - Google Chrome 22-07-2026 17_49_08" src="https://github.com/user-attachments/assets/9fb9456c-3ec4-493d-8039-4b8399ee2861" />
+<img width="1366" height="766" alt="banking-frontend - Google Chrome 22-07-2026 17_46_27" src="https://github.com/user-attachments/assets/c054c4b2-f255-4597-a14b-27c566f693cb" />
 
-- Login Page
-- Registration Page
-- Dashboard
-- Transaction History
-- Money Transfer
-- Admin Dashboard
 
 ---
 
